@@ -23,17 +23,17 @@ var arr=[];
 var fibnum=0;
 function fibonacci(arreglo,num){
             fibnum = num;
-            for(var i =0; i<num; i++){
-                if(i==0 || i == 1){
+            for(var i =0; i<=num; i++){
+                if(i<= 1){
                     arreglo[i]=i;
                 }else{
                     ant = i-1;
                     arreglo[i] = arreglo[ant] + arreglo[ant-1];
                 }  
             }
-    return arreglo[fibnum-1];
+    return arreglo[fibnum];
 }
-console.log(fibonacci(arr,7));
+console.log(fibonacci(arr,5));
 
 //4
 var arr=["Hola","Como","Estas","Amigo"];
@@ -91,3 +91,14 @@ function doblepar(arreglo){
     return arr;
 }
 console.log(doblepar(arr));
+
+//fibonacci recursivo
+var n=6;
+function fib(n){
+    if(n<=1){
+        return n;   
+    }
+    return fib(n-1) + fib(n-2);
+}
+console.log(fib(n));
+
