@@ -20,25 +20,20 @@ console.log(factorial(5));
 
 //3
 var arr=[];
-var ant=1;
-function fibonacci(num){
-    for(var i = 0; i <= num; i++){
-        if(num == 0){
-            arr[i] = i;
-            return arr;
-        }
-        if(i == 0 || i == 1){
-            arr[i] = i;
-        }
-        else{
-            ant = i -1;
-            arr[i] = arr[ant] + arr[ant-1];
-        }
-
-    }
-    return arr;
+var fibnum=0;
+function fibonacci(arreglo,num){
+            fibnum = num;
+            for(var i =0; i<num; i++){
+                if(i==0 || i == 1){
+                    arreglo[i]=i;
+                }else{
+                    ant = i-1;
+                    arreglo[i] = arreglo[ant] + arreglo[ant-1];
+                }  
+            }
+    return arreglo[fibnum-1];
 }
-console.log(fibonacci(5));
+console.log(fibonacci(arr,7));
 
 //4
 var arr=["Hola","Como","Estas","Amigo"];
